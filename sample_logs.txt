@@ -1,0 +1,56 @@
+[2024-03-15 10:00:01] INFO: Application started
+[2024-03-15 10:00:02] INFO: Loading configuration from /etc/app/config.yaml
+[2024-03-15 10:00:03] INFO: Configuration loaded successfully
+[2024-03-15 10:00:05] INFO: Connecting to database at db.internal:5432
+[2024-03-15 10:00:06] INFO: Database connection established
+[2024-03-15 10:00:10] INFO: User alice logged in
+[2024-03-15 10:00:15] INFO: User bob logged in
+[2024-03-15 10:00:23] WARNING: Memory usage at 75%
+[2024-03-15 10:00:30] INFO: User alice requested /api/users
+[2024-03-15 10:00:31] INFO: User bob requested /api/products
+[2024-03-15 10:00:45] ERROR: Database query timeout: SELECT * FROM orders WHERE status='pending'
+[2024-03-15 10:00:46] WARNING: Retrying database connection
+[2024-03-15 10:00:47] INFO: Database reconnected
+[2024-03-15 10:00:50] INFO: User charlie logged in
+[2024-03-15 10:01:00] INFO: User alice requested /api/orders
+[2024-03-15 10:01:05] ERROR: Database query timeout: SELECT * FROM orders WHERE user_id=123
+[2024-03-15 10:01:06] ERROR: Database query timeout: SELECT * FROM inventory
+[2024-03-15 10:01:07] ERROR: Database connection lost
+[2024-03-15 10:01:08] CRITICAL: Service degraded - database unavailable
+[2024-03-15 10:01:10] WARNING: Entering failover mode
+[2024-03-15 10:01:15] INFO: Connecting to backup database at db-backup.internal:5432
+[2024-03-15 10:01:16] INFO: Backup database connection established
+[2024-03-15 10:01:20] INFO: Service restored
+[2024-03-15 10:01:25] INFO: User alice requested /api/orders
+[2024-03-15 10:01:26] INFO: Request completed in 45ms
+[2024-03-15 10:01:30] INFO: User bob logged out
+[2024-03-15 10:02:00] INFO: User david logged in
+[2024-03-15 10:02:15] WARNING: Memory usage at 80%
+[2024-03-15 10:02:30] INFO: User david requested /api/reports
+[2024-03-15 10:02:35] INFO: Generating report for user david
+[2024-03-15 10:02:50] WARNING: Report generation taking longer than expected
+[2024-03-15 10:03:00] INFO: Report generated successfully
+[2024-03-15 10:03:15] INFO: User eve logged in
+[2024-03-15 10:03:30] ERROR: Invalid authentication token for user unknown
+[2024-03-15 10:03:31] WARNING: Possible brute force attempt detected from 192.168.1.100
+[2024-03-15 10:03:32] ERROR: Invalid authentication token for user unknown
+[2024-03-15 10:03:33] ERROR: Invalid authentication token for user unknown
+[2024-03-15 10:03:34] WARNING: Blocking IP 192.168.1.100 for 5 minutes
+[2024-03-15 10:03:45] INFO: User alice logged out
+[2024-03-15 10:04:00] INFO: Scheduled job started: cleanup_old_sessions
+[2024-03-15 10:04:05] INFO: Cleaned up 47 expired sessions
+[2024-03-15 10:04:10] INFO: Scheduled job completed: cleanup_old_sessions
+[2024-03-15 10:05:00] WARNING: Memory usage at 85%
+[2024-03-15 10:05:30] INFO: User frank logged in
+[2024-03-15 10:06:00] INFO: Health check passed
+[2024-03-15 10:06:30] DEBUG: Cache hit ratio: 94.2%
+[2024-03-15 10:07:00] INFO: User eve requested /api/dashboard
+[2024-03-15 10:07:01] INFO: Request completed in 120ms
+[2024-03-15 10:07:30] WARNING: Slow query detected: 2.3s for user_analytics
+[2024-03-15 10:08:00] INFO: User charlie logged out
+[2024-03-15 10:08:30] ERROR: Failed to send email notification: SMTP connection refused
+[2024-03-15 10:08:31] WARNING: Email service unavailable, queuing notification
+[2024-03-15 10:09:00] INFO: User grace logged in
+[2024-03-15 10:09:30] INFO: User frank requested /api/settings
+[2024-03-15 10:10:00] INFO: Application checkpoint: all systems operational
+
