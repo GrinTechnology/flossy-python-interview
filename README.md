@@ -2,6 +2,8 @@
 
 We're going to build a log analyzer together. This is a collaborative exercise, so think of it as pair programming with a colleague, not a distant assessment of your skills.
 
+**Note**: We likely won't finish everything, and that's fine. The goal is to write clean, working code together and have good discussions along the way.
+
 ## Setup
 
 No dependencies needed. Just Python 3.8+.
@@ -58,8 +60,3 @@ Implement filtering by:
 ### Checkpoint 5 (Stretch): Pattern Detection
 - **Recurring sequences**: Do certain errors always follow each other? For example, in our logs, database timeouts lead to connection loss, then failover. Can we detect that pattern automatically?
 - **Anomalies**: Are there time windows with unusually high (or low) log activity? The brute force attack at 10:03 generates a burst of errors—can we flag that?
-
----
-
-**Note**: We likely won't finish everything, and that's fine. The goal is to write clean, working code together and have good discussions along the way.
-
